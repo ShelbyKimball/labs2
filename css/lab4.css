@@ -1,0 +1,23 @@
+#content{
+    float: left;
+    margin: 100px 0px 0 130px;
+    text-align: center;
+}
+.item{
+    width: 380px;
+    height: 650px;
+    margin: 10px;
+    float: left;
+    border: #dee3e1 2px solid;
+    box-sizing: border-box;
+}.detail{
+    height: 35px;
+    background-color: black;
+    padding-top: 20px;
+    color: #fff;
+ }
+ .des{
+     width: 350px;
+     height: 100px;
+     box-sizing: border-box;
+ }
