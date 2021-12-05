@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo js</title>
+</head>
+<body>
+  <script type="text/javascript">
+    // var a = prompt("Nhap so a = ");
+    // var b = prompt("Nhap so b = ");
+    // a = parseInt(a);
+    // b = parseInt(b);
+    // for (var i=0;i<a && i<b;i++){
+    //   if (a%i==0 && b%i==0){
+    //     tmp = i;
+    //   }
+    // }
+    // console.log("UCLN cua a va b la: "+tmp);
+
+    // var a = prompt("Nhap so a = ");
+    // var b = prompt("Nhap so b = ");
+    // a = parseInt(a);
+    // b = parseInt(b);
+    // for (var i=a;true;i++){
+    //   if (i%a==0 && i%b==0){
+    //     tmp = i;
+    //     break;
+    //   }
+    // }
+    // console.log(tmp);
+
+    // var a,b;
+    // do{
+    //   a = parseInt(Math.random()*100);
+    //   b = parseInt(prompt("Nhap mot so:"));
+    // }while (b>=100 || isNaN(b))
+    // if (a==b){
+    //   alert("Ban da trung 1 can nha Vinhomes");
+    // }else{
+    //   alert("Chuc ban may man lan sau")
+    // }
+
+    function vietlot(){
+      var a,b,c,d,e,f;
+      a = parseInt(Math.random()*45);
+      b = parseInt(Math.random()*45);
+      c = parseInt(Math.random()*45);
+      d = parseInt(Math.random()*45);
+      e = parseInt(Math.random()*45);
+      f = parseInt(Math.random()*45);
+      var arr = [a,b,c,d,e,f];
+      console.log(arr);
+
+      do{
+          var a1,b1,c1,d1,e1,f1;
+          a1 = parseInt(prompt("Nhap cap so thu 1: "));
+          b1 = parseInt(prompt("Nhap cap so thu 2: "));
+          c1 = parseInt(prompt("Nhap cap so thu 3: "));
+          d1 = parseInt(prompt("Nhap cap so thu 4: "));
+          e1 = parseInt(prompt("Nhap cap so thu 5: "));
+          f1 = parseInt(prompt("Nhap cap so thu 6: "));
+      }while (a1>0 && b1<0 && c1<0 && d1<0 && e1<0 && f1<0 && a1>45 &&b1>45 && c1>45 && d1>45 && e1>45 && f1>45
+                && isNaN(a1)  && isNaN(b1) && isNaN(c1) && isNaN(d1) && isNaN(e1) && isNaN(f1));
+
+      var count = 0;
+      //a1
+      for(var i=0;i<6;i++){
+        if (arr[i]==a1){
+          arr[i] = 50; // cho arr[i] = 50 luon, vi chi quan tam den count = bao nhieu
+          count++;
+          break;
+        }
+      }
+      //b1
+      for(var i=0;i<6;i++){
+        if (arr[i]==b1){
+          arr[i] = 50;
+          count++;
+          break;
+        }
+      }
+      //c1
+      for(var i=0;i<6;i++){
+        if (arr[i]==c1){
+          arr[i] = 50;
+          count++;
+          break;
+        }
+      }
+      //d1
+      for(var i=0;i<6;i++){
+        if (arr[i]==d1){
+          arr[i] = 50;
+          count++;
+          break;
+        }
+      }
+      //e1
+      for(var i=0;i<6;i++){
+        if (arr[i]==e1){
+          arr[i] = 50;
+          count++;
+          break;
+        }
+      }
+      //f1
+      for(var i=0;i<6;i++){
+        if (arr[i]==f1){
+          arr[i] = 50;
+          count++;
+          break;
+        }
+      }
+
+      if (count==6){
+        alert("Chuc mung ban da trung 100 ty dong");
+      }else if (count==5){
+        alert("Chuc mung ban da trung 50 ty dong");
+      }else if (count==4){
+        alert("Chuc mung ban da trung 1 ty dong");
+      }else if (count==3){
+        alert("Chuc mung ban da trung 1 trieu dong");
+      }else if (count==2){
+        alert("Chuc mung ban da trung 50 nghin dong");
+      }else if (count==1){
+        alert("Chuc ban may man la sau 1");
+      }else if (count==0){
+        alert("Chuc ban may man lan sau");
+      }
+    }
+    vietlot();
+  </script>
+</body>
+</html>
