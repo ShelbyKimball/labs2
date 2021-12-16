@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab js5</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/demo_bootrap.css" rel="stylesheet"/>
+</head>
+<body>
+    <header class="header section col-md-12">
+        <div class="container-fluid text-center">FOOD</div>
+    </header>
+    <content class="main section col-md-12">
+        <div class="container-fluid menu">
+
+        </div>
+    </content>
+
+    <script type="text/javascript" src="JS/jquery.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            url: "https://foodgroup.herokuapp.com/api/category/3",
+            method: "GET",
+            success: function (datas) {
+                var food = datas.data.foods;
+                for (var i=0;i<food.length;i++){
+                    var f_name = food[i].name;
+                    var f_img = food[i].image;
+                    console.log(f_img);
+                    var f_price = food[i].price;
+                    var x = "<div class=\"col-md-4 text-center\">\n" +
+                        "                <h3 class=\"name\">"+f_name+"</h3>\n" +
+                        "                <img class=\"image\" src=\"image/avatarfb"+f_img+".jpg\">\n" +
+                        "                <h3 class=\"price\">"+f_price+"</h3>\n" +
+                        "            </div>"
+                    $(".menu").append(x);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

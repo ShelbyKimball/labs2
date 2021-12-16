@@ -1,0 +1,14 @@
+.header{
+    background-color: #757575;
+    color: white;
+    font-size: 30px;
+    height: 100px;
+    margin-top: 10px;
+    padding-top: 35px;
+}
+.container-fluid{
+    width: 1200px;
+}
+.price{
+    color: red;
+}
