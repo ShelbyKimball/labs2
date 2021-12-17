@@ -1,0 +1,19 @@
+body{
+    background-color: #3aada9;
+}
+.header.container{
+    background-color: #702c91 !important;
+}
+h2{
+    color: white;
+}
+.heading{
+    background-color: #702c91;
+}
+.form-control{
+    margin-top: 20px;
+    background-color: #757575;
+}
+.terms{
+    color: #702c91;
+}
